@@ -1,0 +1,18 @@
+<h1>Hola Comisión! Bienvenidos! </h1>
+<h2>Hoy vemos Express-Handlebars</h2>
+
+<p>Mi nombre es {{usuario.nombre}} </p>
+<p>Mi apellido es {{usuario.apellido}} </p>
+
+{{!-- Usamos condicionales --}}
+
+{{#if usuario.mayorEdad }}
+    <p> Es mayor de edad </p>
+{{else}}
+    <p>Es menor de edad</p>
+{{/if}}
+
+{{!-- Invocamos el partial --}}
+{{>cards}}
+
+<script src="js/main.js"></script>

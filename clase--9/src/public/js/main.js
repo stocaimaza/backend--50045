@@ -1,0 +1,1 @@
+console.log("Estoy funcionando del lado del cliente!"); 
