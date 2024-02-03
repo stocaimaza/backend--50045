@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Cafe",
+    "description": "De Colombia",
+    "price": "2500",
+    "img": "Sin Imagen",
+    "code": "abc124",
+    "stock": "150",
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": [],
+    "id": 2
+  },
+  {
+    "title": "Harina",
+    "description": "Molinos",
+    "price": "3500",
+    "img": "Sin Imagen",
+    "code": "abc125",
+    "stock": "150",
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": [],
+    "id": 3
+  },
+  {
+    "title": "asdf",
+    "description": "asdf",
+    "price": "4",
+    "img": "Sin Imagen",
+    "code": "asdf",
+    "stock": "4",
+    "category": "asd",
+    "status": true,
+    "thumbnails": [],
+    "id": 4
+  }
+]

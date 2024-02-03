@@ -1,0 +1,19 @@
+h1 {
+    color:red; 
+    text-align: center;
+}
+
+.contenedorCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 10px;
+    min-width: 200px;
+}
