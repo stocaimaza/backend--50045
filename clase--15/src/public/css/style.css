@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e60023;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+    /* Cambia el color al pasar el ratón sobre los enlaces */
+}
+
+
+
+
+/* Upload */
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.upload__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.upload__container--image,
+.upload__container--title,
+.upload__container--button {
+    margin-bottom: 10px;
+}
+
+.upload__container--image input[type="file"],
+.upload__container--title input[type="text"],
+.upload__container--button button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.upload__container--button button {
+    background-color: #e60023;
+    color: white;
+    cursor: pointer;
+}
+
+.upload__container--button button:hover {
+    background-color: #c4001a;
+}
+
+/* Cards */
+
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 10px;
+    color: #777;
+}
+
+/*Button*/
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #c4001a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e60023;
+}
