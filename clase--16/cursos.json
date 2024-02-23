@@ -1,0 +1,26 @@
+[
+    {
+      "dias": ["lunes", "miercoles"],
+      "nombre": "Desarrollo Web",
+      "horario": "19 a 21 hs",
+      "numeroComision": "10003"
+    },
+    {
+      "dias": ["martes", "jueves"],
+      "nombre": "JavaScript",
+      "horario": "19 a 21 hs",
+      "numeroComision": "10004"
+    },
+    {
+      "dias": ["lunes", "miercoles"],
+      "nombre": "React",
+      "horario": "10 a 12 hs",
+      "numeroComision": "10005"
+    },
+    {
+      "dias": ["martes"],
+      "nombre": "Backend",
+      "horario": "10 a 12 hs",
+      "numeroComision": "10006"
+    }
+  ]

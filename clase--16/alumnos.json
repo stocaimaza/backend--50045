@@ -1,0 +1,23 @@
+[
+    {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "juan@example.com",
+      "edad": 25,
+      "cursos": []
+    },
+    {
+      "nombre": "María",
+      "apellido": "Gómez",
+      "email": "maria@example.com",
+      "edad": 28,
+      "cursos": []
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "Rodríguez",
+      "email": "pedro@example.com",
+      "edad": 30,
+      "cursos": []
+    }
+  ]
