@@ -1,0 +1,19 @@
+<h1> Listado de Pizzas Vendidas Este Finde en la fiesta de la Cerveza Artesanal</h1>
+
+<ul>
+    {{#each pizzas}}
+        <li> {{this.nombre}} </li>
+        <li> {{this.tam}} </li>
+        <li> {{this.cantidad}} </li>
+    {{/each}}
+</ul>
+{{#if hasPrevPage}}
+    <a href="/pizzas?page={{prevPage}}"> Anterior </a>
+{{/if}}
+
+{{#if hasNextPage}}
+    <a href="/pizzas?page={{nextPage}}"> Siguiente </a>
+{{/if}}
+
+
+<p>Pagina {{currentPage}} de {{totalPages}} </p>

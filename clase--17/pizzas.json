@@ -1,0 +1,52 @@
+[
+    {
+        "nombre": "Muzzarella",
+        "tam" : "chica",
+        "precio" : 4000,
+        "cantidad" : 10
+    },
+    {
+        "nombre": "Muzzarella",
+        "tam" : "familiar",
+        "precio" : 6000,
+        "cantidad" : 25
+    },
+    {
+        "nombre": "Calabresa",
+        "tam" : "chica",
+        "precio" : 5000,
+        "cantidad" : 8
+    },
+    {
+        "nombre": "Calabresa",
+        "tam" : "familiar",
+        "precio" : 7500,
+        "cantidad" : 15
+    },
+    {
+        "nombre": "Napolitana",
+        "tam" : "chica",
+        "precio" : 5500,
+        "cantidad" : 20
+    },
+    {
+        "nombre": "Napolitana",
+        "tam" : "familiar",
+        "precio" : 8000,
+        "cantidad" : 30
+    },
+    {
+        "nombre": "Fugazzeta",
+        "tam" : "chica",
+        "precio" : 6000,
+        "cantidad" : 7
+    },
+    {
+        "nombre": "Fugazzeta",
+        "tam" : "familiar",
+        "precio" : 8000,
+        "cantidad" : 15
+    }
+]
+
+
