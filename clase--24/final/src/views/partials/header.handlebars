@@ -1,0 +1,15 @@
+<header>
+    <a href="/" class="logo"> Coderest </a>
+
+    <nav>
+        <ul>
+            {{#if user}}
+                <li><a href="/profile"> Hola {{user.first_name}} </a></li>
+                <li><a href="/logout"> Cerrar Sesión</a></li>
+            {{else}}
+                <li><a href="/login">Iniciar sesión </a></li>
+                <li><a href="/register">Registrarse</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
