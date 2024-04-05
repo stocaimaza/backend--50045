@@ -1,0 +1,53 @@
+[
+    {
+      "nombre": "Pelota de fútbol",
+      "categoria": "Deportes",
+      "precio": 15.99
+    },
+    {
+      "nombre": "Muñeca Barbie",
+      "categoria": "Juguetes para niñas",
+      "precio": 25.49
+    },
+    {
+      "nombre": "Rompecabezas de dinosaurios",
+      "categoria": "Educativos",
+      "precio": 12.99
+    },
+    {
+      "nombre": "Set de bloques de construcción",
+      "categoria": "Creativos",
+      "precio": 19.99
+    },
+    {
+      "nombre": "Pistola de agua",
+      "categoria": "Juegos al aire libre",
+      "precio": 8.99
+    },
+    {
+      "nombre": "Cocinita de juguete",
+      "categoria": "Juguetes para niños",
+      "precio": 29.99
+    },
+    {
+      "nombre": "Peluche de unicornio",
+      "categoria": "Peluches",
+      "precio": 14.99
+    },
+    {
+      "nombre": "Avión de control remoto",
+      "categoria": "Vehículos",
+      "precio": 39.99
+    },
+    {
+      "nombre": "Juego de té para niños",
+      "categoria": "Juegos de imitación",
+      "precio": 17.99
+    },
+    {
+      "nombre": "Set de pinturas y pinceles",
+      "categoria": "Arte y manualidades",
+      "precio": 22.99
+    }
+  ]
+  

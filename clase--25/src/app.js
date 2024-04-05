@@ -49,14 +49,14 @@ console.log(process.argv);
 
 
 //Generamos un pequeño servidor y nos conectamos con MongoDB
-/*
+
 const express = require("express");
-const app = express(); 
+const app = express();
 const mongoose = require("mongoose");
 const UserModel = require("./models/usuarios.model.js");
 const configObject = require("./config/config.js");
 
-const {mongo_url, puerto} = configObject;
+const { mongo_url, puerto } = configObject;
 console.log(configObject);
 
 //Nos conectamos con la BD: 
@@ -84,7 +84,7 @@ app.get("/", async (req, res) => {
 app.listen(puerto, () => {
     console.log(`Escuchando en el PUERTO: `, puerto);
 })
-*/
+
 
 //Listeners: 
 
@@ -106,14 +106,48 @@ console.log("Y esto cuando se muestra?");
 process.on("uncaughtException", (error) => {
     console.log("Tenemos un error mortal", error)
     process.exitCode = 1;
-}); 
+});
 
 //Esta linea me sirve a mi para registrar un error, pero no reemplaza al try catch. Si tenemos un error la aplicación se detiene. 
 
 
-process.on("exit", (code) => {
-    console.log("Terminamos el proceso co el siguiente código: ", code);
-})
+// process.on("exit", (code) => {
+//     console.log("Terminamos el proceso co el siguiente código: ", code);
+// })
 
 
 //firulais(); 
+
+//6) Child Process 
+
+// function operacionCompleja() {
+//     let resultado = 0;
+
+//     for (let i = 0; i < 5e9; i++) {
+//         resultado += i;
+//     }
+
+//     return resultado;
+// }
+
+// app.get("/suma", (req, res) => {
+//     const resultado = operacionCompleja();
+//     res.send(`El resultado de la operación es: ${resultado}`);
+// })
+
+//Tenemos que lograr que el proceso de suma se realice sin bloquear el resto de los endpoints. 
+
+//Comenzamos a estructurar el forkeo. 
+//1) Separamos la función que trae problemas a otro módulo. 
+//2) La modificamos y la dejamos disponible para cuando el padre la solicite. 
+//3) Ejecutamos la ruta: 
+
+const {fork} = require("child_process");
+
+app.get("/suma", (req, res) => {
+    const child = fork("./src/operacionCompleja.js");
+    child.send("iniciando"); //Enviamos un mensaje al hijo. 
+    child.on("message", resultado => {
+        res.send(`El resultado de la operación es: ${resultado}`);
+    })
+})
