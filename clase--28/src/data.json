@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Pelota",
+    "categoria": "Deporte",
+    "precio": 100
+  },
+  {
+    "nombre": "Metegol",
+    "caterogia": "Deporte",
+    "precio": 100
+  }
+]
