@@ -1,0 +1,79 @@
+{{!-- <h1>Mi Perfil</h1>
+<p>Bienvenido!, {{user.nombre}} {{user.apellido}}!</p>
+<p>Role: {{user.role}} </p>
+
+<form action="/api/users/logout" method="POST">
+  <button class="btnMios" type="submit">Logout</button>
+</form>
+
+{{#if this.isAdmin}}
+  <a href="/realtimeproducts"> Modificar Productos </a>
+{{else}}
+  <a href="/chat"> Chat en vivo</a>
+  <a href="/products"> Tienda </a>
+{{/if}} --}}
+
+{{!-- Con CSS --}}
+
+
+<style>
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .profile-card p {
+    margin-bottom: 10px;
+  }
+
+  .profile-card .btnMios {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #c1101a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .profile-card .btnMios:hover {
+    background-color: #ff1f33;
+  }
+
+  .profile-card a {
+    display: block;
+    margin-bottom: 10px;
+    color: #c1101a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+
+<h1>Mi Perfil</h1>
+
+<div class="profile-card">
+  <p>Bienvenido, {{user.nombre}} {{user.apellido}}!</p>
+  <p>Rol: {{user.role}}</p>
+
+  <form action="/api/users/logout" method="POST">
+    <button class="btnMios" type="submit">Logout</button>
+  </form>
+
+  {{#if this.isAdmin}}
+    <a class="btnMios" href="/realtimeproducts">Modificar Productos</a>
+  {{else}}
+    <a class="btnMios" href="/chat">Chat en vivo</a>
+    <a class="btnMios" href="/products">Tienda</a>
+  {{/if}}
+</div>
