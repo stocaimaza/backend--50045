@@ -1,0 +1,15 @@
+{
+  "name": "tinkiwinkisuma",
+  "version": "1.0.0",
+  "description": "Proyecto de clase Coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
