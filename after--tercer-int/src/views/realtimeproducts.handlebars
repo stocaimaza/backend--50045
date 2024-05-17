@@ -1,0 +1,125 @@
+<h1>Real Time Products</h1>
+<h2>Productos actualizados en tiempo real</h2>
+<h3 id="role">{{role}}</h3>
+<h3 id="email">{{email}}</h3>
+
+
+<div id="contenedorProductos"></div>
+
+<h2>Formulario para agregar productos</h2>
+
+
+<form>
+    <input type="text" id="title" placeholder="Titulo">
+    <input type="text" id="description" placeholder="Descripcion">
+    <input type="number" id="price" placeholder="Precio">
+    <input type="text" id="img" value="Sin Imagen">
+    <input type="text" id="code" placeholder="Código">
+    <input type="number" id="stock" placeholder="Stock">
+    <input type="text" id="category" placeholder="Categoria">
+    <select id="status">
+        <option value="true"> Activo </option>
+        <option value="false"> Inactivo </option>
+    </select>
+    <button type="button" id="btnEnviar"> Enviar </button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+<script src="js/realtime.js"></script>
+
+
+<style>
+    /* Títulos */
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Contenedor de productos */
+    #contenedorProductos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    /* Tarjeta de producto */
+    .card {
+        width: 300px;
+        margin-bottom: 20px;
+        border: 1px solid #c1101a;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card p {
+        margin: 0;
+        padding: 5px;
+    }
+
+    .card button {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        background-color: #c1101a;
+        color: #fafafa;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+        background-color: #ff1f33;
+    }
+
+    /* Formulario */
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+        outline: none;
+        border-color: #c1101a;
+    }
+
+    button#btnEnviar {
+        width: 100%;
+        padding: 10px;
+        background-color: #c1101a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button#btnEnviar:hover {
+        background-color: #ff1f33;
+    }
+</style>
