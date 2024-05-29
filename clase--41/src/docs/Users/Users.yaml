@@ -1,0 +1,145 @@
+paths:
+  /api/users:
+    get:
+      summary: Obtenemos todos los usuarios de la BD
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Obtienen todos los usuarios correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/User"
+        "500":
+          description: Error interno del servidor
+    post:
+      summary: Este endpoint crea un usuario
+      tags: 
+        - Users
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema: 
+              $ref: "#components/requestBodies/createUser"
+      responses:
+        "201":
+          description: Usuario creado correctamente
+  /api/users/{uid}:
+    get:
+      summary: Obtiene un solo usuario por ID
+      tags: 
+        - Users
+      parameters: 
+      - name: uid
+        in: path
+        required: true
+        description: id del usuario que se quire buscar
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Usuario encontrado
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/User"
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizamos usuario por ID
+      tags: 
+        - Users
+      parameters: 
+      - name: uid
+        in: path
+        required: true
+        description: id del usuario que se quire actualizar
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/updateUser"
+      responses:
+        "200":
+          description: Usuario actualizado correctamente
+        "404":
+          description: Usuario no encontrado
+        "500":
+          description: Error interno del servidor
+      
+
+components:
+  schemas:
+    User:
+      type: object
+      properties: 
+        _id: 
+          type: ObjectId
+          description: Id autogenerado por MongoDB
+        first_name: 
+          type: string
+          description: Nombre del usuario
+        last_name: 
+          type: string
+          description: Apellido del usuario
+        password:
+          type: string
+          description: Password del usuario
+      example: 
+        _id: ObjectId('123456')
+        first_name: Tinki
+        last_name: Winki
+        password: 1234
+  requestBodies: 
+    createUser:
+      type: object
+      properties: 
+        first_name: 
+          type: string
+          description: Nombre del usuario
+        last_name: 
+          type: string
+          description: Apellido del usuario
+        password:
+          type: string
+          description: Password del usuario
+        email:
+          type: string
+          description: Email del usuario
+      example: 
+        first_name: Mirtha
+        last_name: Legrand
+        password: 1234
+        email: chiqui@legrand.com
+    updateUser:
+      type: object
+      properties: 
+        first_name: 
+          type: string
+          description: Nombre del usuario
+        last_name: 
+          type: string
+          description: Apellido del usuario
+        password:
+          type: string
+          description: Password del usuario
+        email:
+          type: string
+          description: Email del usuario
+      example: 
+        first_name: Mirtha
+        last_name: Legrand
+        password: 1234
+        email: chiqui@legrand.com
+
+
+
