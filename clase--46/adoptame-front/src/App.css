@@ -1,0 +1,115 @@
+nav {
+  background-color: #4CAF50; /* Color de fondo del navbar */
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  justify-content: space-between; /* Alineamos los elementos al inicio y al final del navbar */
+  align-items: center; /* Centramos verticalmente los elementos */
+  border: #45a049 4px solid;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white; /* Color del texto de los enlaces */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #45a049; /* Cambio de color de fondo al pasar el mouse */
+}
+
+nav img {
+  margin-right: 20px; /* Ajustamos el margen derecho para separar el logo de los enlaces */
+  width: 200px;
+}
+
+/*Home*/
+
+.home-container {
+  text-align: center;
+  margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+}
+
+.buttons-container {
+  margin-top: 20px; /* Ajusta el margen superior de los botones */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/*Formularios*/
+
+/* Estilos para los formularios */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+

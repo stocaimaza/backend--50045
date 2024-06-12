@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Fideos",
+        "descripcion": "Los mas ricos",
+        "precio": 1500,
+        "stock": 100,
+        "img":"./img/fideos.jpg",
+        "categoria":"Almacen"
+    },
+    {
+        "nombre": "Arroz",
+        "descripcion": "El que no se pasa",
+        "precio": 1500,
+        "stock": 100,
+        "img":"./img/arroz.jpg",
+        "categoria":"Almacen"
+    },
+    {
+        "nombre": "Yerba",
+        "descripcion": "Yerba Misionera",
+        "precio": 500,
+        "stock": 100,
+        "img":"./img/yerba.jpg",
+        "categoria":"Lacteos"
+    },
+    {
+        "nombre": "Aceite",
+        "descripcion": "Cocinero",
+        "precio": 1900,
+        "stock": 100,
+        "img":"./img/aceite.jpg",
+        "categoria":"Lacteos"
+    }
+]
