@@ -1,0 +1,132 @@
+openapi: 3.0.1
+info:
+  title: Documentación de la App Tienda Marolio
+  description: E-commerce
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/products:
+    get:
+      summary: Obtener todos los productos
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  docs:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Product'
+                  totalPages:
+                    type: number
+                  prevPage:
+                    type: number
+                  nextPage:
+                    type: number
+                  page:
+                    type: number
+                  hasPrevPage:
+                    type: boolean
+                  hasNextPage:
+                    type: boolean
+                  prevLink:
+                    type: string
+                  nextLink:
+                    type: string
+    post:
+      summary: Agregar un nuevo producto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /api/products/{pid}:
+    get:
+      summary: Obtener un producto por su ID
+      parameters:
+        - in: path
+          name: pid
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    put:
+      summary: Actualizar un producto por su ID
+      parameters:
+        - in: path
+          name: pid
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    delete:
+      summary: Eliminar un producto por su ID
+      parameters:
+        - in: path
+          name: pid
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+        img:
+          type: string
+        code:
+          type: string
+        stock:
+          type: number
+        category:
+          type: string
+        status:
+          type: boolean
+        thumbnails:
+          type: array
+          items:
+            type: string
+        owner:
+          type: string
