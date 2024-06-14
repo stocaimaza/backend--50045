@@ -196,7 +196,36 @@ class UserController {
         }
     }
 
-    
+    async cambiarRolPremium(req, res) {
+        const { uid } = req.params;
+        try {
+            const user = await userRepository.findById(uid);
+
+            if (!user) {
+                return res.status(404).send("Usuario no encontrado");
+            }
+
+            // Verificamos si el usuario tiene la documentacion requerida: 
+            const documentacionRequerida = ["Identificacion", "Comprobante de domicilio", "Comprobante de estado de cuenta"];
+
+            const userDocuments = user.documents.map(doc => doc.name);
+
+            const tieneDocumentacion = documentacionRequerida.every(doc => userDocuments.includes(doc));
+
+            if (!tieneDocumentacion) {
+                return res.status(400).send("El usuario tiene que completar toda la documentacion requerida o no tendra feriados la proxima semana");
+            }
+
+            const nuevoRol = user.role === "usuario" ? "premium" : "usuario";
+
+            res.send(nuevoRol); 
+
+        } catch (error) {
+            res.status(500).send("Error del servidor, Hector tendra gripe dos semanas mas");
+        }
+    }
+
+
 
 }
 
